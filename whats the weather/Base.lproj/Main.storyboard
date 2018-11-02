@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="whats_the_weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emanuel-hahn-200491-unsplash" translatesAutoresizingMaskIntoConstraints="NO" id="9mn-zN-6ca">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's the Weather ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zo5-aH-1sa">
+                                <rect key="frame" x="58" y="50" width="259" height="32"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your City:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YfZ-Y4-RnI">
+                                <rect key="frame" x="125" y="115" width="125" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6yN-rd-hGq">
+                                <rect key="frame" x="84.5" y="180" width="206" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="206" id="Ua6-mZ-voT"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="soo-wR-ET7"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iyn-wX-INT">
+                                <rect key="frame" x="153" y="243" width="69" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="69" id="feN-lF-ttQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" red="0.19438400274578094" green="1" blue="0.93704936009376327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qkD-Lr-gKs"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PR5-s0-cQ8">
+                                <rect key="frame" x="45" y="309" width="285" height="133"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="133" id="ada-NQ-PuS"/>
+                                    <constraint firstAttribute="width" constant="285" id="vpX-rk-9fX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M0g-G7-gPK">
+                                <rect key="frame" x="0.0" y="569" width="375" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Check for another City">
+                                    <color key="titleColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Im3-AD-xQP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YfZ-Y4-RnI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0l5-dn-gkt"/>
+                            <constraint firstItem="M0g-G7-gPK" firstAttribute="top" secondItem="PR5-s0-cQ8" secondAttribute="bottom" constant="127" id="1ix-sz-TzC"/>
+                            <constraint firstItem="6yN-rd-hGq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3pp-7g-uyh"/>
+                            <constraint firstItem="PR5-s0-cQ8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bm2-Wa-crz"/>
+                            <constraint firstItem="Iyn-wX-INT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GsN-jK-x7f"/>
+                            <constraint firstItem="M0g-G7-gPK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nsb-XH-sQt"/>
+                            <constraint firstItem="YfZ-Y4-RnI" firstAttribute="top" secondItem="zo5-aH-1sa" secondAttribute="bottom" constant="33" id="PbZ-yc-Hdo"/>
+                            <constraint firstItem="6yN-rd-hGq" firstAttribute="top" secondItem="YfZ-Y4-RnI" secondAttribute="bottom" constant="43" id="dOE-va-9xJ"/>
+                            <constraint firstItem="Iyn-wX-INT" firstAttribute="top" secondItem="6yN-rd-hGq" secondAttribute="bottom" constant="33" id="etv-L6-5vA"/>
+                            <constraint firstItem="PR5-s0-cQ8" firstAttribute="top" secondItem="Iyn-wX-INT" secondAttribute="bottom" constant="32" id="g6u-mJ-sHC"/>
+                            <constraint firstItem="zo5-aH-1sa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pZh-s9-XtC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="M0g-G7-gPK" secondAttribute="trailing" id="t7V-vn-K06"/>
+                            <constraint firstItem="zo5-aH-1sa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="zj3-ne-2Sz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cityTextfield" destination="6yN-rd-hGq" id="7qY-Xa-Dd1"/>
+                        <outlet property="getWeather" destination="PR5-s0-cQ8" id="pUq-M5-8Lp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="emanuel-hahn-200491-unsplash" width="3494" height="4659"/>
+    </resources>
+</document>
